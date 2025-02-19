@@ -1,0 +1,23 @@
+v1.0.0:
+    date:2025-02-19
+    changes:
+      - 初始化版本
+        1、图表
+          * custom 自定义图标
+          * map 地图
+          * pie 饼图
+          * bar 柱状图
+        2、配置
+          * 网格 grid
+            （left、top、right、bottom）
+          * 颜色组 color
+            （颜色数组、线性渐变、径向渐变、角度渐变）
+          * 标题 title
+             （text、subText、left）
+          * 坐标系 
+              - 直角坐标系 cartesian2d
+              （xAxis、yAxis）
+          * visualMap 视觉映射
+        3、方法
+          * setOption 修改配置
+          * registerMap 注册地图数据

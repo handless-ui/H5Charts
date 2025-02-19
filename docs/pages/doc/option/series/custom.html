@@ -1,0 +1,48 @@
+<header>
+    series-custom
+</header>
+<p>
+    自定义系列可以个性化的绘制任意图表。
+</p>
+<h1>
+    所有属性
+</h1>
+<h2 id="fixed-left">
+    <span class="item-kind">series-custom.</span>
+    <span class="item-key">type</span>
+    <span class="item-defalut">= 'custom'</span>
+    <br />
+    <span class="item-type">string</span>
+</h2>
+<h2 id="fixed-draw">
+    <span class="item-kind">series-custom.</span>
+    <span class="item-key">draw</span>
+    <br />
+    <span class="item-type">Function</span>
+</h2>
+<p>
+    可以使用画笔绘制任意需要的内容：
+</p>
+<pre tag="javascript">
+draw:function(params){
+    // 个性化绘制
+}
+</pre>
+<p>
+    上面的形参params包括：
+</p>
+<ul>
+    <li>
+        <span class="item-key">painter</span> 画笔
+        （具体可用方法可以查阅 <a class="link" href="https://handless-ui.github.io/VISLite" target="_blank">handless-ui.github.io/VISLite</a> ）。
+    </li>
+    <li>
+        <span class="item-key">grid</span> 包含画布尺寸信息（left、right、top、bottom、width、height）。
+    </li>
+    <li>
+        <span class="item-key">cx</span> 画布中心横坐标。
+    </li>
+    <li>
+        <span class="item-key">cy</span> 画布中心纵坐标。
+    </li>
+</ul>

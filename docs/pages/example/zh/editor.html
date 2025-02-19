@@ -1,0 +1,173 @@
+<div class="content">
+    <div class="left view">
+        <div class="nav">
+            <span id="nav-editor-btn" class="active" onClick="showExampleEditor()">代码编辑</span>
+            <span id="nav-code-btn" onClick="showExampleCode()">完整代码</span>
+        </div>
+        <div class="tool">
+            <div class="side left">
+                <span class="js">
+                    JS
+                </span>
+            </div>
+            <div class="side right">
+                <button id="run-btn" class="run" onClick="runExample()">
+                    运行
+                </button>
+            </div>
+        </div>
+        <textarea id="source-id" spellcheck="false"></textarea>
+        <div id="code-id" class="code-view"></div>
+    </div>
+    <div class="right view">
+        <iframe id="run-id"></iframe>
+    </div>
+</div>
+<style>
+    div.content {
+        background-color: #eff0f6;
+        font-size: 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    div.content>.view {
+        height: calc(100vh - 50px);
+        vertical-align: top;
+        white-space: normal;
+        display: inline-block;
+        font-size: 14px;
+    }
+
+    div.content>.view.left {
+        width: 40%;
+        border-right: 1px solid #cdd0d1;
+    }
+
+    div.content>.view.left>.nav {
+        line-height: 33px;
+        z-index: 2;
+        position: relative;
+        background-color: inherit;
+    }
+
+    div.content>.view.left>.nav>span {
+        display: inline-block;
+        padding: 0 20px;
+        border: 1px solid transparent;
+        cursor: pointer;
+    }
+
+    div.content>.view.left>.nav>span.active {
+        color: #409eff;
+        background-color: #fff;
+        border-right-color: #dcdfe6;
+        border-left-color: #dcdfe6;
+        font-weight: 800;
+    }
+
+    div.content>.view.left>.tool {
+        height: 30px;
+        background-color: white;
+        position: relative;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 1;
+    }
+
+    div.content>.view.left>.tool>.side {
+        position: absolute;
+        top: 0;
+    }
+
+    div.content>.view.left>.tool>.side.left {
+        left: 10px;
+    }
+
+    div.content>.view.left>.tool>.side.left>.js {
+        background: #f7df1e;
+        color: #000;
+        font-size: 12px;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 0 10px;
+        margin-left: 5px;
+        margin-top: 3px;
+        height: 24px;
+        line-height: 24px;
+        vertical-align: middle;
+        cursor: pointer;
+        display: inline-block;
+        font-weight: 800;
+        font-family: monospace;
+    }
+
+    div.content>.view.left>.tool>.side.right {
+        right: 0;
+    }
+
+    div.content>.view.left>.tool>.side.right>.run {
+        width: 62px;
+        height: 30px;
+        color: #fff;
+        background-color: #409eff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-image: url("./images/run.svg");
+        background-size: auto 50%;
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        padding-left: 20px;
+        padding-right: 0;
+        font-size: 12px;
+    }
+
+    div.content>.view.left>.tool>.side.right>.run:hover {
+        background-color: #5aabff;
+    }
+
+    div.content>.view.left>textarea {
+        width: 100%;
+        height: calc(100% - 65px);
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-family: monospace;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        resize: none;
+    }
+
+    div.content>.view.left>.code-view {
+        width: 100%;
+        height: calc(100% - 65px);
+        font-size: 14px;
+    }
+
+    div.content>.view.left>.code-view>.pageby-pre {
+        width: 100% !important;
+        height: 100% !important;
+        background-color: white;
+        outline: none !important;
+    }
+
+    div.content>.view.left>.code-view>.pageby-pre>pre {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    div.content>.view.right {
+        width: calc(100vw - 40%);
+    }
+
+    div.content>.view.right>iframe {
+        background-color: white;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        border: none;
+        margin: 20px;
+        border-radius: 5px;
+    }
+</style>

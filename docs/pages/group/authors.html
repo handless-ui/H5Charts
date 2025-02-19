@@ -1,0 +1,86 @@
+<div class="content">
+    <header>
+        <h3>
+            贡献者列表
+        </h3>
+        <p>
+            虽然H5Charts还只是一个孵化项目，但希望可以在未来的岁月里不断成长，在此感谢所有贡献者，感谢每一个人的帮助与支持
+        </p>
+    </header>
+    <div class="view">
+        <h4>
+            核心人员
+        </h4>
+        <ul>
+            <li>
+                <a href="https://zxl20070701.github.io/notebook/home.html" target="_blank">
+                    <img src="./images/zxl20070701.jpg" alt="z Z ...">
+                    <div>z Z ...</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<style>
+    .content>header {
+        text-align: center;
+        background-color: #F4F7FC;
+        color: #4e6167;
+        padding: 50px calc(50vw - 400px);
+    }
+
+    .content>header>h3 {
+        font-size: 40px;
+        color: #333333;
+    }
+
+    .content>header>p {
+        line-height: 1.6em;
+        margin-top: 30px;
+    }
+
+    .content>.view {
+        padding: 50px calc(50vw - 400px);
+    }
+
+    .content>.view>h4 {
+        margin: 10px 0;
+        position: relative;
+    }
+
+    .content>.view>h4::before {
+        content: " ";
+        position: absolute;
+        height: 100%;
+        width: 4px;
+        background-color: red;
+        left: -10px;
+    }
+
+    .content>.view ul {
+        font-size: 0;
+    }
+
+    .content>.view li {
+        display: inline-block;
+        width: 200px;
+        font-size: 16px;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .content>.view li>a {
+        color: black;
+    }
+
+    .content>.view li>a:hover {
+        text-decoration: underline;
+    }
+
+    .content>.view li>a>img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 1px solid rgb(225, 223, 223);
+    }
+</style>

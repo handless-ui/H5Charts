@@ -1,0 +1,48 @@
+<div class="page-view">
+    <div class="left">
+        <form onsubmit="doSearch()">
+            <div class="search">
+                <input type="text" placeholder="搜索手册" onkeydown="doSearch">
+            </div>
+        </form>
+        <div class="menu">
+            <h2 onClick="loadPage(event)" name="get-started">
+                快速上手
+            </h2>
+        </div>
+    </div>
+    <div class="right doc-view manual" id="content-right-id"></div>
+</div>
+<style>
+    .page-view>.left {
+        width: 240px;
+    }
+
+    .page-view>.left .search {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .page-view>.left .search>input {
+        width: 200px;
+        height: 42px;
+        border-radius: 10px;
+        background-image: url("./images/search.svg");
+        background-size: 16px auto;
+        background-position: 170px center;
+        background-repeat: no-repeat;
+    }
+
+    .page-view>.left>.menu {
+        padding: 10px;
+    }
+
+    .page-view>.left>.menu [name] {
+        cursor: pointer;
+    }
+
+    .page-view>.left>.menu>h2 {
+        line-height: 40px;
+        font-size: 18px;
+    }
+</style>

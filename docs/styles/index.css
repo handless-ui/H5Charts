@@ -1,0 +1,437 @@
+body {
+  min-width: 1000px;
+  overflow: auto;
+}
+
+body > header {
+  height: 50px;
+  background-color: white;
+  white-space: nowrap;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  z-index: 3;
+}
+
+body > header > h2 {
+  font-size: 0;
+  padding: 9px 15px 9px 25px;
+  width: 100%;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+body > header > h2 > .navbar-logo {
+  height: 32px;
+}
+
+body > header > nav {
+  line-height: 50px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 200px;
+  position: relative;
+  z-index: 1;
+  font-size: 0;
+}
+
+body > header > nav > span {
+  display: inline-block;
+  padding: 0 20px;
+  cursor: pointer;
+  height: 50px;
+  text-align: center;
+  vertical-align: top;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  font-size: 14px;
+}
+
+body > header > nav > span:hover {
+  border-top-color: black;
+}
+
+body > header > nav > span:hover {
+  background-color: rgb(243, 243, 243);
+}
+
+body > header > nav > span[active="yes"] {
+  border-top-color: #74a2cd;
+}
+
+body > header > nav > span[active="yes"] > a > i {
+  color: #74a2cd;
+}
+
+body > header > nav > span > a {
+  font-size: 0;
+}
+
+body > header > nav > span > a > i {
+  font-style: normal;
+}
+
+body > header > nav > span > a > .caret {
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  margin-top: 23px;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+body > header > nav > span > a > i,
+body > header > nav > span > a > .caret {
+  vertical-align: top;
+  color: black;
+  font-size: 14px;
+  display: inline-block;
+}
+
+body > header > nav > span[active="yes"] > a > .caret {
+  color: #74a2cd;
+}
+
+body > header > nav > span:hover > ul {
+  display: block;
+}
+
+body > header > nav > span > ul {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+  width: 250px;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: -8px;
+  background-color: white;
+  text-align: left;
+  display: none;
+}
+
+body > header > nav > span > ul > li {
+  padding: 0 20px;
+  color: #081642;
+}
+
+body > header > nav > span > ul > li:hover {
+  background-color: #f9f9f9;
+  color: #344c9b;
+}
+
+body > header > nav > span > ul > li > a {
+  background-image: url("../images/link.svg");
+  color: inherit;
+  background-position: right center;
+  background-repeat: no-repeat;
+  padding-right: 10px;
+}
+
+body > .content {
+  padding-top: 50px;
+}
+
+/* 通用的左菜右内 */
+
+.page-view {
+  display: flex;
+}
+
+.page-view > .left {
+  width: 290px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-right: 1px solid #ddd;
+}
+
+.page-view > .left > .nav {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  line-height: 39px;
+  font-size: 14px;
+}
+
+.page-view > .left > .nav > span {
+  width: 20%;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.page-view > .left > .nav > .active {
+  border-top: 3px solid #024b9d;
+}
+
+.page-view > .left > .nav > a {
+  float: right;
+  margin-top: 3px;
+  padding: 0 10px;
+  color: #03a9f4;
+  text-decoration: underline;
+}
+
+.page-view > .left > .nav > a:hover {
+  font-weight: 800;
+}
+
+.page-view > .left .search {
+  line-height: normal;
+  display: inline-table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.page-view > .left .search > input {
+  background-color: #fff;
+  background-image: none;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #dcdfe6;
+  box-sizing: border-box;
+  color: #606266;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
+  width: 220px;
+  outline: none;
+}
+
+.page-view > .left .search > input:focus {
+  border-color: #409eff;
+}
+
+.page-view > .left .search > input::placeholder {
+  color: #c0c4cc;
+}
+
+.page-view > .left .search > button {
+  background-color: #f5f7fa;
+  color: #909399;
+  vertical-align: middle;
+  border: 1px solid #dcdfe6;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  width: 55px;
+  white-space: nowrap;
+  height: 32px;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.page-view > .right {
+  flex-grow: 1;
+}
+
+.page-view > .left,
+.page-view > .right {
+  height: calc(100vh - 50px);
+  overflow: auto;
+}
+
+/* 折叠菜单 */
+.menu-toggle-view {
+  padding-left: 20px;
+}
+
+.menu-toggle-view ul {
+  margin-left: 20px;
+}
+
+.menu-toggle-view span:hover {
+  text-decoration: underline;
+}
+
+.menu-toggle-view li[is-open] > span {
+  background-repeat: no-repeat;
+  background-position: -4px center;
+  background-size: 14px auto;
+  padding-left: 15px;
+}
+
+.menu-toggle-view span {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 400;
+  color: #304455;
+  cursor: pointer;
+  margin: 7px 0;
+  height: 1.2em;
+  width: 100%;
+  display: inline-block;
+  font-size: 13px;
+  user-select: none;
+}
+
+.menu-toggle-view span > i {
+  font-style: normal;
+}
+
+.menu-toggle-view li[is-open="yes"] > span {
+  background-image: url(../images/open.png);
+}
+
+.menu-toggle-view li[is-open="yes"] > span > i {
+  display: none;
+}
+
+.menu-toggle-view li[is-open="no"] > span {
+  background-image: url(../images/close.png);
+}
+
+.menu-toggle-view li[is-open="no"] > ul {
+  display: none;
+}
+
+.menu-toggle-view .gray {
+  color: #999999;
+  font-style: normal;
+}
+
+/* 文档内容 */
+.doc-view {
+  padding: 10px 30px;
+  position: relative;
+}
+
+.doc-view > header {
+  font-size: 28px;
+  padding: 20px 0;
+  font-weight: 800;
+  color: #024b9d;
+  border-bottom: 1px solid #ccc;
+}
+
+.doc-view.manual > header {
+  border-bottom: none;
+  color: black;
+}
+
+.doc-view > h1 {
+  font-weight: normal;
+  color: #969696;
+  font-size: 28px;
+  margin: 40px 0px;
+}
+
+.doc-view > h2 {
+  font-size: 20px;
+  line-height: 2em;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+.doc-view.manual > h2 {
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.doc-view > h3 {
+  font-size: 16px;
+  line-height: 2em;
+  padding: 15px 0;
+}
+
+.doc-view > h4 {
+  font-size: 12px;
+  padding: 15px 0 10px 0;
+  position: relative;
+  margin-left: 10px;
+}
+
+.doc-view > h4::before {
+  content: "#";
+  color: #4051b6;
+  position: absolute;
+  left: -0.7em;
+  margin-top: -0.05em;
+  padding-right: 0.5em;
+  font-size: 1.2em;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.doc-view .version {
+  line-height: 3em;
+  padding-left: 5px;
+  font-size: 16px;
+  color: #009688;
+  font-weight: 800;
+}
+
+.doc-view .item-kind {
+  color: #74a2cd;
+}
+
+.doc-view .item-key {
+  color: #024b9d;
+}
+
+.doc-view .item-defalut {
+  color: #434343;
+  font-size: 16px;
+  margin-left: 15px;
+  vertical-align: bottom;
+  font-weight: normal;
+}
+
+.doc-view .item-type {
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 4px;
+  padding: 3px 5px;
+  color: #333;
+  background-color: #ccdeee;
+  font-size: 12px;
+  line-height: 1.4em;
+}
+
+.doc-view > p {
+  line-height: 1.6em;
+  color: #3c3939;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 10px 0;
+  white-space: normal;
+}
+
+.doc-view > ul {
+  color: #3c3939;
+}
+
+.doc-view > ul > li {
+  list-style: disc;
+  margin: 10px 20px;
+  font-size: 14px;
+  line-height: 1.8em;
+}
+
+.doc-view span.code {
+  background-color: #f4f4f4;
+  color: #337ab7;
+  margin: 0 5px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: 800;
+}
+
+.doc-view .link {
+  text-decoration: underline;
+  color: #2196f3;
+  margin: 0 10px;
+}
+
+.doc-view .link:hover {
+  color: #055596;
+}
+
+[name="example"] {
+  width: 600px;
+  height: 400px;
+  box-shadow: rgba(10, 9, 9, 0.1) 0px 0px 5px;
+  margin: 20px;
+  border-radius: 10px;
+}

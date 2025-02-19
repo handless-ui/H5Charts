@@ -1,0 +1,305 @@
+<div class="page-view">
+    <div class="left">
+        <div class="nav">
+            <span class="active">
+                配置项
+            </span>
+            <span onClick="goto('doc/api')">
+                API
+            </span>
+            <a href="#/doc/manual" target="_blank">
+                教程
+            </a>
+        </div>
+        <form onsubmit="doSearch()">
+            <div class="search">
+                <input type="text" placeholder="搜索配置项，回车查看更多结果" onkeydown="doSearch">
+                <button onClick="doSearch">搜索</button>
+            </div>
+        </form>
+        <div class="menu">
+            <h2>
+                <span class="title">
+                    setOption({
+                </span>
+                <span class="btn" onClick="closeAll('doc-option-menu-id')">
+                    收起所有
+                </span>
+            </h2>
+            <ul class="menu-toggle-view" id="doc-option-menu-id">
+                <li>
+                    <span>
+                        title
+                    </span>
+                    <ul>
+                        <li>
+                            <span name="title.text">
+                                text: <em class="gray">''</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="title.subtext">
+                                subtext: <em class="gray">''</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="title.left">
+                                left: <em class="gray">'left'</em>,
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        grid
+                    </span>
+                    <ul>
+                        <li>
+                            <span name="grid.left">
+                                left: <em class="gray">50</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="grid.right">
+                                right: <em class="gray">50</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="grid.top">
+                                top: <em class="gray">50</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="grid.bottom">
+                                bottom: <em class="gray">50</em>,
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        visualMap
+                    </span>
+                    <ul>
+                        <li>
+                            <span name="visualMap.min">
+                                min: <em class="gray">...</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="visualMap.max">
+                                max: <em class="gray">...</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="visualMap.inRange">
+                                inRange: <em class="gray">...</em>,
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        xAxis
+                    </span>
+                    <ul>
+                        <li>
+                            <span name="xAxis.type">
+                                type: <em class="gray">'category'</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="xAxis.data">
+                                data <em class="gray">...</em>,
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        yAxis
+                    </span>
+                    <ul>
+                        <li>
+                            <span name="yAxis.type">
+                                type: <em class="gray">'value'</em>,
+                            </span>
+                        </li>
+                        <li>
+                            <span name="yAxis.data">
+                                data <em class="gray">...</em>,
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span type="Array">
+                        series
+                    </span>
+                    <ul>
+                        <li>
+                            <span type="JSON">
+                                type: custom
+                            </span>
+                            <ul>
+                                <li>
+                                    <span name="series.custom.type">
+                                        type: <em class="gray">'custom'</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span name="series.custom.draw">
+                                        draw: <em class="gray">...</em>,
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span type="JSON">
+                                type: map
+                            </span>
+                            <ul>
+                                <li>
+                                    <span name="series.map.type">
+                                        type: <em class="gray">'map'</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span name="series.map.map">
+                                        map: <em class="gray">''</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span type="Array">
+                                        data
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <span name="series.map.data_name">
+                                                name: <em class="gray">...</em>,
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span name="series.map.data_value">
+                                                value: <em class="gray">...</em>,
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>
+                                        label
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <span name="series.map.label_show">
+                                                show: <em class="gray">false</em>,
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span type="JSON">
+                                type: bar
+                            </span>
+                            <ul>
+                                <li>
+                                    <span name="series.bar.type">
+                                        type: <em class="gray">'bar'</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span name="series.bar.data">
+                                        data: <em class="gray">...</em>,
+                                    </span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span type="JSON">
+                                type: pie
+                            </span>
+                            <ul>
+                                <li>
+                                    <span name="series.pie.startAngle">
+                                        startAngle: <em class="gray">-90</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span name="series.pie.angle">
+                                        angle: <em class="gray">360</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span name="series.pie.radius">
+                                        radius: <em class="gray">...</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span name="series.pie.center">
+                                        center: <em class="gray">...</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span name="series.pie.type">
+                                        type: <em class="gray">'pie'</em>,
+                                    </span>
+                                </li>
+                                <li>
+                                    <span type="Array">
+                                        data
+                                    </span>
+                                    <ul>
+                                        <li>
+                                            <span name="series.pie.data_name">
+                                                name: <em class="gray">...</em>,
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span name="series.pie.data_value">
+                                                value: <em class="gray">...</em>,
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span name="color">
+                        color <em class="gray">...</em>,
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right doc-view" id="content-right-id"></div>
+</div>
+<style>
+    .page-view>.left>.menu>h2 {
+        position: relative;
+        margin-top: 5px;
+    }
+
+    .page-view>.left>.menu>h2>span {
+        display: inline-block;
+        padding: 5px;
+        font-size: 14px;
+        vertical-align: top;
+    }
+
+    .page-view>.left>.menu>h2>.title {
+        margin: 0;
+        font-family: Monaco;
+    }
+
+    .page-view>.left>.menu>h2>.btn {
+        cursor: pointer;
+        color: #337ab7;
+        position: absolute;
+        right: 0;
+    }
+</style>

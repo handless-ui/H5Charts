@@ -1,0 +1,91 @@
+<header>
+    快速上手
+</header>
+<h2>
+    获取 H5Charts
+</h2>
+<p>
+    H5Charts 提供了多种安装方式，你可以根据项目的实际情况选择以下任意一种方式安装。
+</p>
+<h3>
+    从 npm 获取
+</h3>
+<pre tag>
+    npm install --save h5charts
+</pre>
+<h3>
+    从 CDN 获取
+</h3>
+<p>
+    可以从以下免费 CDN 中获取和引用 H5Charts：
+</p>
+<ul>
+    <li>
+        <a class="link" href="https://www.jsdelivr.com/package/npm/h5charts" target="_blank">jsDelivr</a>
+    </li>
+</ul>
+<h2>
+    引入 H5Charts
+</h2>
+<p>
+    如果是CDN的方式，使用Script标签引入后即可使用：
+</p>
+<pre tag="html">
+    <script src="https://cdn.jsdelivr.net/npm/h5charts"></script>
+</pre>
+<p>
+    我们更推荐使用npm的方式：
+</p>
+<pre tag="javascript">
+    import H5Charts from "h5charts";
+</pre>
+<h2>
+    绘制一个简单的图表
+</h2>
+<p>
+    在绘图前我们需要为 H5Charts 准备一个定义了高宽的 DOM 容器：
+</p>
+<pre tag="html">
+&lt;body&gt;
+    &lt;!-- 为 H5Charts 准备一个定义了宽高的 DOM --&gt;
+    &lt;div id="root" style="width: 600px;height:400px;"&gt;&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+<p>
+    然后，我们就可以创建图表了：
+</p>
+<pre tag="javascript">
+var mychart = new H5Charts(document.getElementById('root'),{
+     
+    // 图表的配置项和数据
+    title: {
+        text: "H5Charts 入门例子"
+    },
+    grid: {
+        top: 70
+    },
+    color: ["red"],
+    xAxis: {
+        data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    },
+    series: [{
+        data: [120, 190, 150, 80, 70, 110, 130],
+        type: "bar"
+    }]
+});
+</pre>
+<p>
+    这样你的第一个图表就诞生了！
+</p>
+<div name="example" c="get-started"></div>
+<p>
+    如果后续需要对图表进行调整（包括数据改变），可以使用mychart上的方法，比如：
+</p>
+<pre tag="javascript">
+mychart.setOption({
+    color: ["pink"]
+});
+</pre>
+<p>
+    现在，柱状图就变成粉红色了。
+</p>

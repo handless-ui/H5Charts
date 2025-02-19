@@ -1,0 +1,101 @@
+<header>
+    series-pie
+</header>
+<p>
+    饼图主要用于表现不同类目的数据在总和中的占比。每个的弧度表示数据数量的比例。
+</p>
+<h1>
+    所有属性
+</h1>
+<h2 id="fixed-left">
+    <span class="item-kind">series-pie.</span>
+    <span class="item-key">type</span>
+    <span class="item-defalut">= 'pie'</span>
+    <br />
+    <span class="item-type">string</span>
+</h2>
+<h2 id="fixed-startAngle">
+    <span class="item-kind">series-pie.</span>
+    <span class="item-key">startAngle</span>
+    <span class="item-defalut">= -90</span>
+    <br />
+    <span class="item-type">number</span>
+</h2>
+<p>
+    起始角度。
+</p>
+<h2 id="fixed-angle">
+    <span class="item-kind">series-pie.</span>
+    <span class="item-key">angle</span>
+    <span class="item-defalut">= 360</span>
+    <br />
+    <span class="item-type">number</span>
+</h2>
+<p>
+    跨越角度，支持范围 (0, 360] 。
+</p>
+<h2 id="fixed-radius">
+    <span class="item-kind">series-pie.</span>
+    <span class="item-key">radius</span>
+    <span class="item-defalut">= []</span>
+    <br />
+    <span class="item-type">Array</span>
+    <span class="item-type">Function</span>
+</h2>
+<p>
+    表示饼图的内外半径，可以为如下类型：
+</p>
+<ul>
+    <li>
+        <span class="item-key">[number,number]</span>：分别表示内半径和外半径。
+    </li>
+    <li>
+        <span class="item-key">Function</span>：函数参数为({width,height})=>Array，返回值格式需要是上面的数组。
+    </li>
+</ul>
+<h2 id="fixed-center">
+    <span class="item-kind">series-pie.</span>
+    <span class="item-key">center</span>
+    <span class="item-defalut">= []</span>
+    <br />
+    <span class="item-type">Array</span>
+    <span class="item-type">Function</span>
+</h2>
+<p>
+    表示饼图的圆心位置，可以为如下类型：
+</p>
+<ul>
+    <li>
+        <span class="item-key">[number,number]</span>：分别表示中心横坐标和纵坐标。
+    </li>
+    <li>
+        <span class="item-key">Function</span>：函数参数为({width,height})=>Array，返回值格式需要是上面的数组。
+    </li>
+</ul>
+<h2>
+    <span class="item-kind">series-pie.</span>
+    <span class="item-key">data</span>
+    <br />
+    <span class="item-type">Array</span>
+</h2>
+<p>
+    饼图系列中的数据内容数组。
+</p>
+<h3 id="fixed-data_name">
+    <span class="item-kind">series-pie.data.</span>
+    <span class="item-key">name</span>
+    <br />
+    <span class="item-type">string</span>
+</h3>
+<p>
+    数据项名称。
+</p>
+<h3 id="fixed-data_value">
+    <span class="item-kind">series-pie.data.</span>
+    <span class="item-key">value</span>
+    <br />
+    <span class="item-type">number</span>
+</h3>
+<p>
+    数据值。
+</p>

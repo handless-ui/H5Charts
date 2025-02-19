@@ -1,0 +1,78 @@
+<header>
+    color
+</header>
+<p>
+    调色盘颜色列表。如果系列没有设置颜色，则会依次循环从该列表中取颜色作为系列颜色。 默认为：
+</p>
+<pre tag="javascript">
+    ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4', '#ea7ccc']
+</pre>
+<p>
+    支持的颜色格式：
+</p>
+<h3>
+    颜色值
+</h3>
+<p>
+    比如
+    <span class="code">'rgb(128, 128, 128)'</span>
+    ，如果想要加上 alpha 通道表示不透明度，可以使用 RGBA，比如
+    <span class="code">'rgba(128, 128, 128, 0.5)'</span>
+    ，也可以使用十六进制格式，比如 <span class="code">'#ccc'</span>。
+</p>
+<h3>
+    渐变色
+</h3>
+<p>
+    目前支持的渐变色包括：
+</p>
+<h4>
+    线性渐变
+</h4>
+<pre tag="javascript">
+{
+    type: 'linear',
+    x1: 0,
+    y1: 0,
+    x2: 100,
+    y2: 0,
+    colorStops: [{
+        offset: 0, color: 'red' // 0% 处的颜色
+    }, {
+        offset: 1, color: 'blue' // 100% 处的颜色
+    }],
+}
+</pre>
+<h4>
+    径向渐变
+</h4>
+<pre tag="javascript">
+{
+    type: 'radial',
+    cx: 100,
+    cy: 100,
+    radius: 50,
+    colorStops: [{
+        offset: 0, color: 'red' // 0% 处的颜色
+    }, {
+        offset: 1, color: 'blue' // 100% 处的颜色
+    }]
+}
+</pre>
+<h4>
+    角度渐变
+</h4>
+<pre tag="javascript">
+{
+    type: 'conic',
+    cx: 100,
+    cy: 100,
+    beginDeg: 0,
+    deg: Math.PI * 2,
+    colorStops: [{
+        offset: 0, color: 'red' // 0% 处的颜色
+    }, {
+        offset: 1, color: 'blue' // 100% 处的颜色
+    }]
+}
+</pre>

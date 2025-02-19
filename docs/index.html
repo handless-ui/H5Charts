@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OI开源 H5Charts</title>
+    <link rel="shortcut icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./js/min/pageby-0.2.0.js"></script>
+    <script src="./js/system.js"></script>
+    <script src="./js/tool.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+        // 控制是否需要缓存
+        var host = window.location.host;
+        window.needCache = !(/^127\.0\.0\.1/.test(host) || /^localhost/.test(host) || host == "");
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h2>
+            H5Charts
+            <img class="navbar-logo" src="./images/logo.png">
+        </h2>
+        <nav>
+            <span id="nav-btn-home-id">
+                <a href="javascript:void(0)" onClick="goto('home')">
+                    <i>首页</i>
+                </a>
+            </span>
+            <span id="nav-btn-doc-id">
+                <a href="javascript:void(0)">
+                    <i>文档</i>
+                    <b class="caret"></b>
+                </a>
+                <ul id="nav-doc-id">
+                    <li onClick="goto('doc/manual')">
+                        使用手册
+                    </li>
+                    <li onClick="goto('doc/api')">
+                        API
+                    </li>
+                    <li onClick="goto('doc/option')">
+                        配置项手册
+                    </li>
+                </ul>
+            </span>
+            <span id="nav-btn-example-id">
+                <a href="javascript:void(0)" onClick="goto('example/index')">
+                    <i>示例</i>
+                </a>
+            </span>
+            <span id="nav-btn-group-id">
+                <a href="javascript:void(0)">
+                    <i>社区</i>
+                    <b class="caret"></b>
+                </a>
+                <ul id="nav-group-id">
+                    <li onClick="goto('group/authors')">
+                        贡献者列表
+                    </li>
+                    <li>
+                        <a href="https://github.com/handless-ui/H5Charts" target="_blank">
+                            源码（GitHub）
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/handless-ui/H5Charts/issues" target="_blank">
+                            Issues（GitHub）
+                        </a>
+                    </li>
+                </ul>
+            </span>
+        </nav>
+    </header>
+    <div class="content" id="content-id"></div>
+
+    <script>
+        // 环境初始化
+        initEnv();
+    </script>
+</body>
+
+</html>

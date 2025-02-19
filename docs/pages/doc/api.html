@@ -1,0 +1,60 @@
+<div class="page-view">
+    <div class="left">
+        <div class="nav">
+            <span onClick="goto('doc/option')">
+                配置项
+            </span>
+            <span class="active">
+                API
+            </span>
+            <a href="#/doc/manual" target="_blank">
+                教程
+            </a>
+        </div>
+        <form onsubmit="doSearch()">
+            <div class="search">
+                <input type="text" placeholder="搜索API，回车查看更多结果" onkeydown="doSearch">
+                <button onClick="doSearch">搜索</button>
+            </div>
+        </form>
+        <div class="menu">
+            <ul class="menu-toggle-view" id="doc-api-menu-id">
+                <li>
+                    <span>
+                        H5Charts
+                    </span>
+                    <ul>
+                        <li>
+                            <span name="h5charts.registerMap">
+                                registerMap
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span>
+                        H5ChartsInstance
+                    </span>
+                    <ul>
+                        <li>
+                            <span name="instance.setOption">
+                                setOption
+                            </span>
+                        </li>
+                        <li>
+                            <span name="instance.forceUpdate">
+                                forceUpdate
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="right doc-view" id="content-right-id"></div>
+</div>
+<style>
+    .menu-toggle-view {
+        margin-top: 10px;
+    }
+</style>

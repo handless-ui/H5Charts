@@ -1,0 +1,160 @@
+<div class="content">
+    <div class="nav">
+        <h4 onClick="doExampleScroll('bar')" class="bar" style="background-image: url('./images/examples/bar.svg');">
+            柱状图
+        </h4>
+        <h4 onClick="doExampleScroll('pie')" class="pie" style="background-image: url('./images/examples/pie.svg');">
+            饼图
+        </h4>
+        <h4 onClick="doExampleScroll('map')" class="map" style="background-image: url('./images/examples/map.svg');">
+            地理坐标/地图
+        </h4>
+        <h4 onClick="doExampleScroll('custom')" class="custom"
+            style="background-image: url('./images/examples/custom.svg');">
+            自定义系列
+        </h4>
+    </div>
+    <div class="menu" id="menu-id">
+        <h4 id="menu-bar-id">
+            柱状图
+            <span>bar</span>
+        </h4>
+        <ul>
+            <li tag="bar-simple">
+                <a href="#/example/zh/editor?c=bar-simple" target="_blank">
+                    <div style="background-image: url('./images/examples/bar-simple.webp');"></div>
+                    <h6>基础柱状图</h6>
+                </a>
+            </li>
+        </ul>
+        <h4 id="menu-pie-id">
+            饼图
+            <span>pie</span>
+        </h4>
+        <ul>
+            <li tag="pie-simple">
+                <a href="#/example/zh/editor?c=pie-simple" target="_blank">
+                    <div style="background-image: url('./images/examples/pie-simple.webp');"></div>
+                    <h6>简单的饼图</h6>
+                </a>
+            </li>
+            <li tag="pie-half-donut">
+                <a href="#/example/zh/editor?c=pie-half-donut" target="_blank">
+                    <div style="background-image: url('./images/examples/pie-half-donut.webp');"></div>
+                    <h6>半环形图</h6>
+                </a>
+            </li>
+        </ul>
+        <h4 id="menu-map-id">
+            地理坐标/地图
+            <span>map</span>
+        </h4>
+        <ul>
+            <li tag="map-HK">
+                <a href="#/example/zh/editor?c=map-HK" target="_blank">
+                    <div style="background-image: url('./images/examples/map-HK.webp');"></div>
+                    <h6>香港18区人口密度 （2011）</h6>
+                </a>
+            </li>
+        </ul>
+        <h4 id="menu-custom-id">
+            自定义系列
+            <span>custom</span>
+        </h4>
+        <ul>
+            <li tag="custom-gauge">
+                <a href="#/example/zh/editor?c=custom-gauge" target="_blank">
+                    <div style="background-image: url('./images/examples/custom-gauge.webp');"></div>
+                    <h6>自定义仪表盘</h6>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<style>
+    div.content {
+        display: flex;
+        height: calc(100vh - 50px);
+        width: 100vw;
+        background-color: #f3f4fa;
+    }
+
+    div.content>div.nav {
+        flex-basis: 200px;
+        flex-shrink: 0;
+        background-color: white;
+        padding: 10px 0;
+    }
+
+    div.content>div.nav>h4 {
+        line-height: 45px;
+        height: 45px;
+        color: rgb(110, 112, 121);
+        padding-left: 50px;
+        font-weight: 200;
+        background-size: 20px auto;
+        background-repeat: no-repeat;
+        background-position: 20px center;
+        cursor: pointer;
+    }
+
+    div.content>div.menu {
+        flex-grow: 1;
+        padding: 30px;
+        height: 100%;
+        overflow: auto;
+    }
+
+    div.content>div.menu>h4 {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        font-weight: normal;
+        color: rgb(70, 70, 70);
+        font-size: 20px;
+        border-bottom: 1px solid rgb(225, 229, 242);
+    }
+
+    div.content>div.menu>h4>span {
+        font-size: 16px;
+        padding-left: 5px;
+        color: rgb(148, 156, 177);
+        font-weight: 200;
+    }
+
+    div.content>div.menu>ul>li {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    div.content>div.menu>ul>li:hover {
+        text-decoration: underline;
+    }
+
+    div.content>div.menu>ul>li:hover>a>div {
+        background-size: 110% auto;
+    }
+
+    div.content>div.menu>ul>li>a {
+        color: black;
+    }
+
+    div.content>div.menu>ul>li>a>div {
+        width: 268px;
+        height: 201px;
+        background-position: center center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        border-radius: 5px;
+        box-shadow: 0 0 20px rgb(0 0 0 / 5%);
+    }
+
+    div.content>div.menu>ul>li>a>h6 {
+        text-align: center;
+        line-height: 40px;
+        font-size: 14px;
+        font-weight: 200;
+    }
+</style>

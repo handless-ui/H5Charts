@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试 / 地图</title>
+    <script src="../dist/H5Charts.js"></script>
+    <script src="../node_modules/@datapool/china.geojson/china.geoJSON.js"></script>
+    <script src="../node_modules/@datapool/jiangsu.geojson/jiangsu.geoJSON.js"></script>
+    <style>
+        #root {
+            width: 70vw;
+            height: 400px;
+            outline: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <button onclick="doit('china')">中国</button>
+    <button onclick="doit('jiangsu')">江苏省</button>
+
+    <script>
+
+        H5Charts.registerMap("china", chinaGeoJSON);
+        H5Charts.registerMap("jiangsu", JiangsuGeoJSON);
+
+        var mychart = new H5Charts(document.getElementById("root"), {
+            grid: {
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0
+            },
+            series: [{
+                type: "map",
+                map: "china"
+            }]
+        });
+
+        function doit(mapName) {
+            mychart.setOption({
+                series: [{
+                    type: "map",
+                    map: mapName
+                }]
+            })
+        }
+
+        // console.log(mychart)
+
+    </script>
+
+</body>
+
+</html>
