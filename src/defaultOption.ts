@@ -8,23 +8,12 @@ export default function () {
             top: 50,
             bottom: 50
         },
-
-        // 直角坐标系
         xAxis: {
             type: "category"
         },
         yAxis: {
             type: "value"
         },
-
-        // 极坐标系
-        radiusAxis: {
-            type: "value"
-        },
-        angleAxis: {
-            type: "category"
-        },
-
         series: []
     }
     return result
